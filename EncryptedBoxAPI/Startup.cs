@@ -77,6 +77,19 @@ namespace EncryptedBoxAPI
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+
+            app.Use(async (context, nextMiddleware) =>
+            {
+                context.Response.OnStarting(() =>
+                {
+                    context.Response.Headers.Add("can't-be-evil", "true");
+                    return Task.FromResult(0);
+                });
+                await nextMiddleware();
+            });
+
+
             app.UseHttpsRedirection();
             app.UseDefaultFiles();
             app.UseStaticFiles();
@@ -87,6 +100,8 @@ namespace EncryptedBoxAPI
 
 
             //app.UseAuthorization();
+
+           
 
             app.UseEndpoints(endpoints =>
             {

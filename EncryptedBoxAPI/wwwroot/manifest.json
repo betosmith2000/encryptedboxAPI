@@ -9,6 +9,6 @@
       "type": "image/png"
     }
   ],
-  "did_authors": [ "betosmith2000.id" ],
-  "did": [ "betosmith2000.id" ]
+  "did_authors": ["did:stack:v0:1NSHrXkQnTLCdzsQVobBGtHcMfJKFGWTYb"],
+  "did": ["did:stack:v0:1NSHrXkQnTLCdzsQVobBGtHcMfJKFGWTYb"]
 }

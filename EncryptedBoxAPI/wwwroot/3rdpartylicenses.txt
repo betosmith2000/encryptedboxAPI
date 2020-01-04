@@ -120,6 +120,9 @@ Awesome, nor vice versa. **Please do not use brand logos for any purpose except
 to represent the company, product, or service to which they refer.**
 
 
+@jaspero/ng-confirmations
+MIT
+
 blockstack
 MIT
 The MIT License (MIT)

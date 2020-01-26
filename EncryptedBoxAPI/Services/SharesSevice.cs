@@ -43,9 +43,9 @@ namespace EncryptedBoxAPI.Services
             this._shares.DeleteOne<ShareModel>(i => i.id == shares.id);
         }
 
-        public void Remove(string id)
+        public DeleteResult Remove(string id)
         {
-            this._shares.DeleteOne<ShareModel>(i => i.id == id);
+            return this._shares.DeleteOne<ShareModel>(i => i.id == id);
         }
     }
 }

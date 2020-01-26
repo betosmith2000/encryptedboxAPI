@@ -63,13 +63,13 @@ namespace EncryptedBoxAPI.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id:length(24)}")]
+        [HttpDelete("{id}")]
         public IActionResult Delete(string id)
         {
-            ShareModel shares = this.shareService.Get(id);
-            if (shares == null)
-                return NotFound();
-            this.shareService.Remove(shares);
+            //ShareModel shares = this.shareService.Get(id);
+            //if (shares == null)
+            //    return NotFound();
+           var res =  this.shareService.Remove(id);
             return NoContent();
         }
 
